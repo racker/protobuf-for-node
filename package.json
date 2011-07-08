@@ -1,0 +1,16 @@
+{
+    "name": "protobuf_for_node",
+    "description": "Protobuf for node",
+    "version": "0.1.0",
+    "homepage": "http://code.google.com/p/protobuf-for-node/",
+    "engines": {
+        "node": ">=0.4.0"
+    },
+    "author": {
+      "Matthias Ernst": "mernst@google.com"
+    },
+    "config" : { "PROTOBUF" : "/usr/local/Cellar/protobuf/2.4.1/include/"},
+    "scripts" : { 
+      "preinstall" : "PROTOBUF=$NPM_CONFIG_PROTOBUF node-waf configure",
+      "install": "node-waf clean build"}
+}
